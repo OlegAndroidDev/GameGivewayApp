@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/giveaways_navigation">
+
+    <fragment
+        android:id="@+id/giveaways_navigation"
+        android:name="com.example.gamegivewayapp.views.GiveawaysFragment"
+        android:label="Giveaways"
+        tools:layout="@layout/fragment_giveaways" >
+        <action
+            android:id="@+id/action_giveaways_navigation_to_pc_navigation"
+            app:destination="@id/pc_navigation" />
+        <action
+            android:id="@+id/action_giveaways_navigation_to_ps4_navigation"
+            app:destination="@id/ps4_navigation" />
+        <action
+            android:id="@+id/action_giveaways_navigation_to_details_navigation"
+            app:destination="@id/details_navigation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pc_navigation"
+        android:name="com.example.gamegivewayapp.views.PCGiveawaysFragment"
+        android:label="PC"
+        tools:layout="@layout/fragment_p_c_giveaways" >
+        <action
+            android:id="@+id/action_pc_navigation_to_details_navigation"
+            app:destination="@id/details_navigation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ps4_navigation"
+        android:name="com.example.gamegivewayapp.views.PS4GiveawaysFragment"
+        android:label="PS4"
+        tools:layout="@layout/fragment_p_s4_giveaways" >
+        <action
+            android:id="@+id/action_ps4_navigation_to_details_navigation"
+            app:destination="@id/details_navigation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/details_navigation"
+        android:name="com.example.gamegivewayapp.views.DetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details" >
+
+    </fragment>
+
+</navigation>
